@@ -1,0 +1,10 @@
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+
+### Django ###
+*.pyc
+__pycache__/
+local_settings.py
+
