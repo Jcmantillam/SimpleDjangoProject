@@ -4,7 +4,6 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
-{% load staticfiles %}
 html,
 body {
     margin: 0;
@@ -656,7 +655,7 @@ p.para-text-w3ls{
 /*-- inner banner --*/
 
 .inner-banner {
-    background: url("/statics/images/innerbanner.jpg")no-repeat 0px 0px;
+    background: url("https://www.bbva.com/wp-content/uploads/2018/04/BBVA-blockchain-1024x416.png") no-repeat 50%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

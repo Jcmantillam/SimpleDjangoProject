@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'pwa',
 ]
 
 MIDDLEWARE = [
@@ -71,6 +72,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'statics'),
 ]
 
+#ServiceWorker to PWA
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'code_web/static/serviceworker.js')
 
 WSGI_APPLICATION = 'code_web.wsgi.application'
 
