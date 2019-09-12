@@ -169,7 +169,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
-ROOT_URLCONF = 'heroku_project.urls'
+ROOT_URLCONF = 'code_web.urls'
 
 TEMPLATES = [
     {
@@ -187,7 +187,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'heroku_project.wsgi.application'
+WSGI_APPLICATION = 'code_web.wsgi.application'
 
 
 # Database
