@@ -250,7 +250,6 @@ STATIC_ROOT = os.path.join(ROOT_PATH, 'static')
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
-    'SimpleDjangoProject/static',
 ]
 
 
