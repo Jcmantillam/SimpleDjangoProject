@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
+from django.conf.urls.static import static
 
 from code_web.views import home
 from code_web.views import about
@@ -24,4 +25,4 @@ urlpatterns = [
     path(r'home', home , name="home"),
     path('about/', about, name="about"),
     path('', include('pwa.urls'))
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
