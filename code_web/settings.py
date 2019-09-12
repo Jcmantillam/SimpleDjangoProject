@@ -145,6 +145,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
+#ServiceWorker to PWA
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'code_web/static/serviceworker.js')
 
 # Application definition
 
@@ -245,7 +247,7 @@ STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
-STATICFILES_DIRS = [os.path.join(ROOT_PATH, 'static'),os.path.join(BASE_DIR, 'statics')]
+STATICFILES_DIRS = [os.path.join(ROOT_PATH, 'static')]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 #'''
