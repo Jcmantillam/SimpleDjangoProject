@@ -31,10 +31,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </script>
 	
 	<!-- css files -->
-    <link rel="stylesheet" href="https://github.com/Jcmantillam/SimpleDjangoProject/blob/master/statics/css/css_slider.css"/> <!--Slider css -->
-    <link rel="stylesheet"  href="https://github.com/Jcmantillam/SimpleDjangoProject/blob/master/statics/css/bootstrap.css"/> <!--bootstrap css -->
-    <link rel="stylesheet" href="https://github.com/Jcmantillam/SimpleDjangoProject/blob/master/statics/css/style.css"/><!-- custom css -->
-    <link rel="stylesheet" href="https://github.com/Jcmantillam/SimpleDjangoProject/blob/master/statics/css/font-awesome.min.css" type='text/css'><!-- fontawesome css -->
+    <link rel="stylesheet" src={% static "css/css_slider.css" %}/> <!--Slider css -->
+    <link rel="stylesheet"  src={% static "css/bootstrap.css" %}/> <!--bootstrap css -->
+    <link rel="stylesheet" src="{% static "css/style.css"  %}"/><!-- custom css -->
+    <link rel="stylesheet" src={% static "css/font-awesome.min.css" %} type='text/css'><!-- fontawesome css -->
 	<!-- //css files -->
 	
 	<!-- google fonts -->
@@ -133,7 +133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="container">
 		<div class="row bottom_grids text-center mt-lg-5 mt-sm-3">
 			<div class="col-md-4 grid1 mb-5">
-				<img src="https://github.com/Jcmantillam/SimpleDjangoProject/blob/master/statics/images/a1.png" class="img-fluid">
+				<img src={% static "images/a1.png" alt="" %} class="img-fluid">
 				<h3 class="my-3">Incrementa tus visitas</h3>
 				<p class="">Con un menor tiempo de carga, se logra que menor cantidad de usuarios abandonen el sitio al momento de visitarlo.</p>
 			</div>
