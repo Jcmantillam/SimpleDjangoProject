@@ -1,0 +1,7 @@
+{% load pwa %}
+{
+  "name": "PWA Demo",
+  "short_name": "Progessive Web App Demo",
+  "description": "Demo de una PWA par Django",
+  "display": {{ PWA_APP_DISPLAY|js }},
+}
