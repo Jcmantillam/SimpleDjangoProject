@@ -137,7 +137,7 @@ ALLOWED_HOSTS = ['*']
 
 #ServiceWorker to PWA
 PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'code_web/static/serviceworker.js')
-PWA_APP_NAME = 'My App'
+'''PWA_APP_NAME = 'My App'
 PWA_APP_DESCRIPTION = "My app description"
 PWA_APP_THEME_COLOR = '#0A0302'
 PWA_APP_BACKGROUND_COLOR = '#ffffff'
@@ -158,7 +158,7 @@ PWA_APP_SPLASH_SCREEN = [
     }
 ]
 PWA_APP_DIR = 'ltr'
-PWA_APP_LANG = 'en-US'
+PWA_APP_LANG = 'en-US''''
 
 # Application definition
 
