@@ -16,3 +16,9 @@ def about(request):
 
 def root(request):
     return redirect("/home")
+
+def form(request):
+    return render(
+        request,
+        "Form_mail.html"
+    )
