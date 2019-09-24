@@ -25,7 +25,7 @@ from code_web.views import root
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'', root , name="root"),
+    path('', root , name="root"),
     path('home', home , name="home"),
     path('about/', about, name="about"),
     path('', include('pwa.urls')),
