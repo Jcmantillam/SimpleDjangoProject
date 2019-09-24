@@ -21,10 +21,12 @@ from django.conf.urls.static import static
 
 from code_web.views import home
 from code_web.views import about
-print("test")
+from code_web.views import root
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path(r'home', home , name="home"),
+    path(r'', root , name="root"),
+    path('home', home , name="home"),
     path('about/', about, name="about"),
     path('', include('pwa.urls')),
 
