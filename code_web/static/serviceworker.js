@@ -6,7 +6,6 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
         '/home',
         'about/',
-        'form/',
       ]);
     })
   );
@@ -16,7 +15,7 @@ self.addEventListener('fetch', function(event) {
   var requestUrl = new URL(event.request.url);
     if (requestUrl.origin === location.origin) {
       if ((requestUrl.pathname === '/')) {
-        event.respondWith(caches.match('/home','about/','form/'));
+        event.respondWith(caches.match('/home','about/',));
         return;
       }
     }
