@@ -23,6 +23,7 @@ from code_web.views import home
 from code_web.views import about
 from code_web.views import root
 from code_web.views import form
+from code_web.views import coms
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -30,6 +31,7 @@ urlpatterns = [
     path('home', home , name="home"),
     path('about/', about, name="about"),
     path('form/', form, name="form"),
+    path('comentarios/', coms, name="comentarios"),
     path('', include('pwa.urls')),
 
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

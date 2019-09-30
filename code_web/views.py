@@ -56,3 +56,25 @@ def enviar_mail(name, email):
     email = EmailMessage('PWA Demo', content, to=[email])
     email.content_subtype = 'html'
     email.send()
+    
+def coms(request):
+    comentarios = usuarios_registrados.objects.values("nombre","email","comentarios")
+    lista_comentarios = []
+    for c in comentarios:
+        nombre = c["nombre"]
+        mail = c["email"]
+        comentario = c["comentarios"]
+        print(nombre)
+        values = []
+        values.append(nombre)
+        values.append(mail)
+        values.append(comentario)
+        lista_comentarios.append(values)
+    print(lista_comentarios)
+    return render(
+        request,
+        "comentarios.html",
+        {
+            "lista_comentarios": lista_comentarios,
+        }
+    )
