@@ -51,5 +51,8 @@ def form(request):
     
 def enviar_mail(name, email):
 
-    email = EmailMessage('PWA Demo', 'Gracias por tus cometarios', to=[email])
+    content = render_to_string("email_content.html")
+    #print(content)
+    email = EmailMessage('PWA Demo', content, to=[email])
+    email.content_subtype = 'html'
     email.send()
