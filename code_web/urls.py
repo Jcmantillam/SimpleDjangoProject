@@ -23,6 +23,7 @@ from code_web.views import home
 from code_web.views import about
 from code_web.views import root
 from code_web.views import form
+from code_web.views import galeria
 from code_web.views import coms
 
 urlpatterns = [
@@ -31,6 +32,7 @@ urlpatterns = [
     path('home', home , name="home"),
     path('about/', about, name="about"),
     path('form/', form, name="form"),
+    path('galeria/', galeria, name="galeria"),
     path('comentarios/', coms, name="comentarios"),
     path('', include('pwa.urls')),
 

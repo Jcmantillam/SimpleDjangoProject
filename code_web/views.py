@@ -25,7 +25,7 @@ def root(request):
 def form(request):
     print("form")
     if request.method == "POST":
-        print("post")
+        post = True
         #Recolectar la info del formulario
         _nombre = request.POST.get("nombre")
         _email = request.POST.get("email")
@@ -40,7 +40,10 @@ def form(request):
         
         return render(
             request,
-            "Form_mail.html"
+            "Form_mail.html",
+            {
+                "post" : post,
+            }
         )
     else:
         print("Get")
@@ -56,6 +59,12 @@ def enviar_mail(name, email):
     email = EmailMessage('PWA Demo', content, to=[email])
     email.content_subtype = 'html'
     email.send()
+    
+def galeria(request):
+    return render(
+        request,
+        "galeria.html"
+    )
     
 def coms(request):
     comentarios = usuarios_registrados.objects.values("nombre","email","comentarios")

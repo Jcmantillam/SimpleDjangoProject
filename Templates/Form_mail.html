@@ -8,12 +8,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Bank Card Banking Category Flat Bootstrap Responsive Website Template | Contact :: w3layouts</title>
+<title>Formulario</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Bank Card Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<meta name="keywords" content="PWA, Django, Heroku" />
 
     <script>
         addEventListener("load", function () {
@@ -50,8 +49,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<label for="drop" class="toggle"><i class="fa fa-bars"></i></label>
 			<input type="checkbox" id="drop" />
 			<ul class="menu ml-auto mt-1">
-				<li class=""><a href="{% url "home" %}" >Home</a></li>
+				<li class=""><a href="{% url "home" %}" >Página principal</a></li>
 				<li class=""><a href="{% url "about" %}">¿Qué es?</a></li>
+                <li class=""><a href="{% url "galeria" %}">Galería</a></li>
 			</ul>
 		</nav>
 		<!-- //nav -->
@@ -74,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item">
-				<a href="{% url "home" %}">Home</a>
+				<a href="{% url "home" %}">Principal</a>
 			</li>
 			<li class="breadcrumb-item" aria-current="page">Formulario</li>
 		</ol>
@@ -86,18 +86,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- contact -->
 <section class="contact py-5">
 	<div class="container py-lg-5">
-		<h2 class="heading mb-sm-5 mb-4">Diligencia el formulario y se te enviará un <strong>correo electrónico</strong></h2>
+		<h2 class="heading mb-sm-5 mb-4">Ponte en contacto con nosostros, o envíanos tus comentarios o sugerencias</h2>
 		<div class="row">
 			<div class="col-lg-8 col-md-12 contact-form mt-md-0 mt-sm-10 mt-8">
-				<h4 class="mb-4 w3f_title">Recuerda que sólo es una demo, si no encuentras el mail, busca en tu spam.</h4>
+                {%if post%}
+                    <div class="alert alert-success">
+                        <center><h4 class="mb-4 w3f_title">Gracias por tu tiempo, revisa tú bandeja de entrada</h4></center>
+                    </div>
+                {%endif%}
 				<form name="contactform" id="contactform" method="post" >{% csrf_token %}
 						<div class="form-group">
 						  <label>Nombre</label>
-						  <input type="text" class="form-control" id="name" placeholder="Nombres y Apellidos" name="nombre">
+						  <input required type="text" class="form-control" id="name" placeholder="Nombres y Apellidos" name="nombre">
 						</div>
 						<div class="form-group">
 						  <label>E-mail</label>
-						  <input type="email" class="form-control" id="name" placeholder="Correo electrónico" name="email">
+						  <input required type="email" class="form-control" id="name" placeholder="Correo electrónico" name="email">
 						</div>
 						<div class="form-group">
 						  <label>¿Tienes algún comentario o sugerencia?</label>
